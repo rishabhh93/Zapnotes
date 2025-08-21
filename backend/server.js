@@ -17,26 +17,14 @@ connectCloudinary()
 // middlewares
 app.use(express.json())
 
-// ✅ CORS Setup
-const allowedOrigins = [
-  'https://zapnotes-1.onrender.com',  // your frontend on Render
-  'http://localhost:5173',            // Vite local dev
-  'http://localhost:5174'             // alt Vite port if used
-]
-
+// ✅ CORS Setup: Allow all origins (temporary for testing)
 app.use(cors({
-  origin(origin, cb) {
-    if (!origin) return cb(null, true) // allow server-to-server/curl
-    return allowedOrigins.includes(origin)
-      ? cb(null, true)
-      : cb(new Error('Not allowed by CORS'))
-  },
+  origin: "*",
   methods: ['GET','POST','PUT','PATCH','DELETE','OPTIONS'],
-  allowedHeaders: ['Content-Type','Authorization','token'], 
-  credentials: true
+  allowedHeaders: ['Content-Type','Authorization','token']
 }))
 
-// handle preflight
+// handle preflight for all routes
 app.options('*', cors())
 
 // api endpoints
