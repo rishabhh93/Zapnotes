@@ -1,6 +1,6 @@
 # Zapnotes 📚✍️
 
-[Live Demo](https://zapnotes.onrender.com)
+[Live Demo](https://zapnotes-1.onrender.com/)
 
 Zapnotes is a **full-featured Notes Buying platform** built with the **MERN stack**. It allows students to seamlessly browse, upload, and purchase academic notes. The platform integrates secure file storage, fast retrieval, and a smooth payment experience.  
 
